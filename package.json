@@ -1,0 +1,54 @@
+{
+  "name": "@teclasdigitales/userinterauth",
+  "version": "0.2.0",
+  "description": "userinterauth",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src",
+    "prebuild": "rimraf lib",
+    "build": "node build.mjs",
+    "postbuild": "tsc",
+    "prerelease": "npm run build",
+    "release": "release-it"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "axios": "1.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "universal-cookie": "4.0.4"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.14.1",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19",
+    "@types/universal-cookie": "3.0.0",
+    "@typescript-eslint/eslint-plugin": "4.28.3",
+    "@typescript-eslint/parser": "4.28.3",
+    "esbuild": "0.17.18",
+    "eslint": "7.30.0",
+    "eslint-plugin-jest": "24.3.6",
+    "jest": "27.0.6",
+    "lint-staged": "12.1.2",
+    "prettier": "2.3.2",
+    "release-it": "15.6.0",
+    "rimraf": "5.0.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "5.8.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  },
+  "types": "./lib/index.d.ts"
+}
