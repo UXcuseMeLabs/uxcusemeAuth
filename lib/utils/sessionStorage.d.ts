@@ -1,7 +1,6 @@
 export interface Session {
     userId: string;
     authToken: string;
-    zone?: string | null;
 }
 export declare const getMainDomain: () => string;
 /**
