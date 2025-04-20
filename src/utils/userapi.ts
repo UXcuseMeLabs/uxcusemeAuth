@@ -76,24 +76,22 @@ interface Provider {
     comment: string;
     user_id: string;
     username: string;
-    votes: Vote;  // Referencia a `Vote` ya definida
+    votes: Vote; 
     createdAt: Date;
   }
   
-  // Interface para Game
   interface Game {
     id: string;
     name: string;
   }
   
-  // Interface para GameParameter
   interface GameParameter {
     id: string;
     value: number;
     name: string;
     game_id: string;
     user_id: string;
-    game: Game;  // Referencia a `Game` ya definida
+    game: Game;  
   }
   
 

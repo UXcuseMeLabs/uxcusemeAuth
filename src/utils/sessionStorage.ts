@@ -7,7 +7,6 @@ const cookies = new Cookies();
 export interface Session {
   userId: string;
   authToken: string;
-  zone?: string | null;
 }
 
 export const getMainDomain = (): string => {
@@ -46,7 +45,7 @@ export const isSessionActive = (): boolean => {
  */
 export const remove = (): void => {
   const domain = getMainDomain();
-  cookies.remove(ID, { domain });
+  cookies.remove(ID, { domain,  path: "/" });
 };
 
 /**
